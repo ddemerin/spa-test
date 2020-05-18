@@ -21,10 +21,11 @@ const App = () => {
           type="text"
           placeholder="Your Name Here"
           name="Name"
+          value={name}
           onChange={updateName}
         />
         <button onClick={updateName}>Submit</button>
-        {{ updateName } ? <h2>{`Welcome ${name}!`}</h2> : <></>}
+        {{ name } ? <h2>{`Welcome ${name}!`}</h2> : <></>}
       </form>
     </>
   )
