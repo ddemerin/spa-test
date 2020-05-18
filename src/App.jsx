@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import HelloWorld from './components/HelloWorld'
 
 const App = () => {
   const [name, setName] = useState('')
@@ -11,7 +10,7 @@ const App = () => {
     console.log(key)
     const value = e.target.value
     console.log(value)
-    setName()
+    setName(value)
   }
 
   return (
@@ -24,8 +23,8 @@ const App = () => {
           name="Name"
           onChange={updateName}
         />
-        <button onClick={setName}>Submit</button>
-        {{ setName } ? <h2>{`Welcome ${name}!`}</h2> : <></>}
+        <button onClick={updateName}>Submit</button>
+        {{ updateName } ? <h2>{`Welcome ${name}!`}</h2> : <></>}
       </form>
     </>
   )
